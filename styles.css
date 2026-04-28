@@ -535,6 +535,15 @@ body {
     border-radius: 2px;
 }
 
+.video-frame {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 12px;
+}
+
+
+
 
 /* =========================
    TESTIMONIOS PAGE (FULL)
