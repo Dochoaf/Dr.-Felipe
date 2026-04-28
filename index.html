@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Odontológica Dr. Felipe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="navbar">
+    <a href="#" class="logo">
+        <img src="img/logo.png">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+    
+
+<!-- BARRA DE NAVEGACIÓN -->
+    <nav id="navMenu">
+
+
+    <ul>
+        <li><a href="#Inicio">Inicio</a></li>
+        <li><a href="#Servicios">Servicios</a></li>
+        <li><a href="#Testimonios">Testimonios</a></li>
+        <li><a href="#Nosotros">Nosotros</a></li>
+        <li><a href="#Contacto">Contacto</a></li>
+    </ul>
+
+</nav>
+
+</header>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- HERO -->
+     
+    <section class="hero" id="Inicio">
+
+    <div class="content reveal">
+        <h1>Transforma tu sonrisa</h1>
+        <p>La mejor versión de ti empieza hoy</p>
+        <a href="#Contacto" class="btn">Agendar cita</a>
+    </div>
+
+    <img src="img/imagen1.jpg" class="hero-img" alt="sonrisa">
+
+</section>
+
+  <!-- SERVICIOS -->
+
+<section class="services" id="Servicios">
+
+    <div class="services-header">
+        <h2>Nuestros servicios</h2>
+        <p>Soluciones diseñadas para transformar tu sonrisa</p>
+    </div>
+
+    <div class="services-container">
+
+    <!-- TARJETAS -->
+    <div class="services-grid">
+
+        <div class="service-card" data-service="sonrisa">
+            <h3>Diseño de sonrisa</h3>
+            <p>Mejora estética completa para una sonrisa perfecta.</p>
+        </div>
+
+        <div class="service-card" data-service="implantes">
+            <h3>Implantes dentales</h3>
+            <p>Recupera piezas dentales con resultados naturales.</p>
+        </div>
+
+        <div class="service-card" data-service="blanqueamiento">
+            <h3>Blanqueamiento</h3>
+            <p>Logra dientes más blancos en poco tiempo.</p>
+        </div>
+
+        <div class="service-card" data-service="ortodoncia">
+            <h3>Ortodoncia</h3>
+            <p>Alinea tu sonrisa con tecnología moderna.</p>
+        </div>
+
+    </div>
+
+    <!-- PANEL DINÁMICO -->
+    <div class="service-panel" id="servicePanel">
+
+        <div class="panel-content" data-content="sonrisa">
+            <img src="img/sonrisa.jpg">
+            <p>Texto completo del servicio diseño de sonrisa...</p>
+        </div>
+
+        <div class="panel-content" data-content="implantes">
+            <img src="img/implantes.jpg">
+            <p>Texto completo de implantes...</p>
+        </div>
+
+        <div class="panel-content" data-content="blanqueamiento">
+            <img src="img/blanqueamiento.jpg">
+            <p>Texto completo blanqueamiento...</p>
+        </div>
+
+        <div class="panel-content" data-content="ortodoncia">
+            <img src="img/ortodoncia.jpg">
+            <p>Texto completo ortodoncia...</p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- TESTIMONIOS -->
+
+<section class="testimonials" id="Testimonios">
+
+    <div class="testimonials-header">
+        <h2>Testimonios reales</h2>
+        <p>Conoce las experiencias de nuestros pacientes</p>
+    </div>
+
+    <div class="videos-container">
+
+        <div class="video-card">
+            <h3>Diseño de sonrisa - Ana Montoya</h3>
+            <p>Ana nos cuenta cómo transformamos su sonrisa con seguridad y naturalidad.</p>
+            <video controls>
+                <source src="videos/video1.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="video-card">
+            <h3>Microdiseño de sonrisa</h3>
+            <p>Transformamos sonrisas y confianza.</p>
+            <video controls>
+                <source src="videos/video2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="video-card">
+            <h3>Diseño de Sonrisa - Mateo Mora</h3>
+            <p>Mateo opina sobre la tranquilidad que le brinda nuestra innovación.</p>
+            <video controls>
+                <source src="videos/video3.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    </div>
+
+    <div class="testimonials-btn">
+        <a href="testimonios.html" class="btn">Ver más testimonios</a>
+    </div>
+
+</section>
+
+
+
+
+  <!-- SOBRE EL DOCTOR -->
+    <section class="about" id="Nosotros">
+    <div class="about-container">
+        
+        <div class="about-img reveal reveal-left">
+            <img src="img/doctor.jpeg" alt="Dr Felipe">
+        </div>
+
+        <div class="about-text reveal reveal-right">
+            <h2>Sobre el Dr. Felipe</h2>
+            <p>
+                Con años de experiencia en odontología estética, el Dr. Felipe se especializa en transformar sonrisas y devolver la confianza a sus pacientes.
+            </p>
+            <p>
+                Su enfoque combina tecnología avanzada con un trato humano y cercano, garantizando resultados de alta calidad.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- SECCIÓN DE LOS CONTACTOS-->
+
+    <section class="contact" id="Contacto">
+
+<!-- 🔥 TARJETAS (AHORA AQUÍ, FUERA DEL CONTAINER) -->
+    <div class="contact-cards">
+
+        <div class="contact-card">
+            <h3>Líneas de atención</h3>
+            <p>+57 300 000 0000</p>
+            <p>+57 301 000 0000</p>
+            <p><strong>WhatsApp disponible</strong></p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Correo electrónico</h3>
+            <p>contacto@clinica.com</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Sede principal</h3>
+            <p>Medellín, Colombia</p>
+            <p>Cra 00 #00-00</p>
+        </div>
+
+    </div>
+
+    <h3>Cómo llegar</h3>
+
+    <div class="map-container">
+
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=TU_LINK_AQUI"
+        width="100%" 
+        height="350" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+
+</div>
+
+
+    <div class="contact-container">
+
+        <!-- TEXTO -->
+        <div class="contact-info reveal">
+            <h2>Agenda tu cita</h2>
+            <p>Estamos listos para ayudarte a transformar tu sonrisa.</p>
+        </div>
+
+        <!-- FORMULARIO -->
+        <form class="contact-form reveal" id="contactForm">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <input type="tel" name="telefono" placeholder="Tu teléfono" required>
+            <textarea name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+
+            <button type="submit" class="btn">Enviar mensaje</button>
+
+        </form>
+
+    </div>
+
+    
+</section>
+
+    <script src="script.js"></script>
+
+
+    <a href="https://wa.me/573108941600?text=Hola,%20quiero%20agendar%20una%20cita" 
+   class="whatsapp-float" 
+   target="_blank">
+
+    <img src="img/whatsapp.png" alt="WhatsApp">
+
+</a>
+
+</body>
+</html>
