@@ -535,11 +535,21 @@ body {
     border-radius: 2px;
 }
 
-.video-frame {
+.video-wrapper {
+    position: relative;
     width: 100%;
-    height: 350px;
-    border: none;
+    aspect-ratio: 9 / 16; /* 🔥 vertical tipo reels (CAMBIA a 16/9 si quieres horizontal) */
+    overflow: hidden;
     border-radius: 12px;
+}
+
+.video-frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
 }
 
 
@@ -557,8 +567,8 @@ body {
 
 /* más ancho real */
 .testimonials-page .videos-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 /* video más grande */
@@ -570,6 +580,11 @@ body {
     width: 100%;
     height: auto;
     border-radius: 12px;
+}
+
+.testimonials-page .video-wrapper {
+    max-width: 320px;
+    margin: 0 auto;
 }
 
 
@@ -979,9 +994,36 @@ body {
     .videos-container {
         grid-template-columns: 1fr;
     }
+
+    .video-wrapper {
+        max-width: 100%;
+    }
+    
+    .video-card {
+        padding: 20px;
+    }
 }
 
 
+@media (max-width: 1024px) {
+    .testimonials-page .videos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-page .videos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-page .video-wrapper {
+        max-width: 100%;
+    }
+
+    .testimonials-page .video-card {
+        padding: 20px;
+    }
+}
 
 
 
