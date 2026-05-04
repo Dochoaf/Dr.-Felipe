@@ -121,10 +121,10 @@ body {
 
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 
     padding-left: 10%;
-    max-width: 520px;
+    max-width: 800px;
 }
 
 .content h1 {
@@ -175,6 +175,53 @@ body {
     text-decoration: none;
     color: white;
 }
+
+/* =========================
+   HERO PREMIUM TIPOGRAFÍA
+========================= */
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    max-width: 900px;
+}
+
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: #d1d1d1;
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+.hero-support {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #a8a8a8;
+    line-height: 1.5;
+}
+
+.hero-support strong {
+    color: #ffffff;
+    font-weight: 500;
+}
+/* HERO PARA MAS TESTIMONIOS */
+
+.hero-tag {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #d4a84f;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+
+
 
 
 
@@ -823,6 +870,127 @@ body {
 
 
 
+/* =========================
+   FOOTER PREMIUM
+========================= */
+
+.footer {
+    background: #050505;
+    color: #ccc;
+    padding: 60px 10% 30px;
+    border-top: 1px solid rgba(212,168,79,0.2);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-col h3 {
+    color: #d4a84f;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: #aaa;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #d4a84f;
+}
+
+.footer-logo {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* REDES SOCIALES FOOTER */
+.footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.footer-social a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.05);
+    color: #d4a84f;
+
+    transition: all 0.3s ease;
+}
+
+.footer-social a svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* HOVER PRO */
+.footer-social a:hover {
+    background: #d4a84f;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212,168,79,0.4);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin: 0 auto 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -963,6 +1131,8 @@ body {
         border-radius: 8px;
     }
 
+}
+
 
 @keyframes fadeIn {
     from {
@@ -977,53 +1147,51 @@ body {
 
 
 
- /*--------------------*/
-    /* FORMATO PARA VIDEOS*/
-    /*--------------------*/
+/*--------------------*/
+/* FORMATO PARA VIDEOS*/
+/*--------------------*/
 
-@media (max-width: 768px) {
-    .testimonials-page .videos-container {
-        grid-template-columns: 1fr;
-    }
-
-    .testimonials-page .video-card video {
-        height: auto;
-    }
-}
-
-    .videos-container {
-        grid-template-columns: 1fr;
-    }
-
-    .video-wrapper {
-        max-width: 100%;
-    }
-    
-    .video-card {
-        padding: 20px;
-    }
-}
-
-
+/* 📱 TABLET */
 @media (max-width: 1024px) {
     .testimonials-page .videos-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* 📱 MÓVIL */
 @media (max-width: 768px) {
+
+    /* GRID GENERAL */
+    .videos-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    /* TESTIMONIOS PAGE */
     .testimonials-page .videos-container {
         grid-template-columns: 1fr;
     }
 
-    .testimonials-page .video-wrapper {
-        max-width: 100%;
-    }
-
-    .testimonials-page .video-card {
+    /* TARJETAS */
+    .video-card {
         padding: 20px;
     }
+
+    /* 🔥 WRAPPER (QUITAMOS ALTURA FORZADA) */
+    .video-wrapper {
+        width: 100%;
+    }
+
+    /* 🔥 VIDEO (SOLUCIÓN REAL) */
+    .video-frame {
+        width: 100%;
+        height: auto; /* 🔥 clave */
+        display: block;
+        border-radius: 12px;
+        background: #000;
+    }
 }
+
 
 
 
