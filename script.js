@@ -111,111 +111,130 @@ Mensaje: ${mensaje}`;
 
 
 /* ///////////////////////// */
-/*SUB SECCIONES DEL SERVICIO*/
+/* SUB SECCIONES DEL SERVICIO */
 /* ///////////////////////// */
+
 const cards = document.querySelectorAll(".service-card");
 const panel = document.getElementById("servicePanel");
 const contents = document.querySelectorAll(".panel-content");
 
 let activeService = null;
 
-cards.forEach(card => {
-    card.addEventListener("click", () => {
-
-        const service = card.dataset.service;
-
-        // 🔥 ESTADO VISUAL (DORADO ACTIVO)
-        cards.forEach(c => c.classList.remove("active"));
-        card.classList.add("active");
-
-        // si clickeas el mismo → cerrar
-        if (activeService === service) {
-            panel.classList.remove("active");
-            contents.forEach(c => c.classList.remove("active"));
-            activeService = null;
-
-            card.classList.remove("active"); // 🔥 quitar selección
-            return;
-        }
-
-        // abrir panel
-        panel.classList.add("active");
-
-        // cambiar contenido
-        contents.forEach(c => {
-            c.classList.remove("active");
-            if (c.dataset.content === service) {
-                c.classList.add("active");
-            }
-        });
-
-        activeService = service;
-
-        // scroll inteligente (el que hicimos antes)
-        setTimeout(() => {
-            const rect = panel.getBoundingClientRect();
-
-            if (rect.top > window.innerHeight - 100) {
-                const targetY = panel.getBoundingClientRect().top + window.scrollY - 100;
-
-                window.scrollTo({
-                    top: targetY,
-                    behavior: "smooth"
-                });
-            }
-        }, 100);
-
-    });
-});
-
-/*-----------------*/
-/*---SERV MOBILE---*/
-/*-----------------*/
-
 function isMobile() {
     return window.innerWidth <= 768;
 }
 
+/* =========================
+   LIMPIAR MOBILE
+========================= */
+function closeMobileDetails() {
+    document.querySelectorAll(".mobile-detail").forEach(el => el.remove());
+    cards.forEach(c => c.classList.remove("active"));
+    activeService = null;
+}
+
+/* =========================
+   CLICK CARDS
+========================= */
 cards.forEach(card => {
+
     card.addEventListener("click", () => {
 
         const service = card.dataset.service;
 
-        // 🔥 SI ES MOBILE → acordeón
+        /* =========================
+           MOBILE (ACORDEÓN)
+        ========================= */
         if (isMobile()) {
 
             const existing = card.nextElementSibling;
 
-            // cerrar otros
-            document.querySelectorAll(".mobile-detail").forEach(el => {
-                if (el !== existing) el.remove();
-            });
-
             // si ya está abierto → cerrar
             if (existing && existing.classList.contains("mobile-detail")) {
                 existing.remove();
+                card.classList.remove("active");
+                activeService = null;
                 return;
             }
 
-            // buscar contenido original
+            // cerrar otros
+            closeMobileDetails();
+
             const content = document.querySelector(
                 `.panel-content[data-content="${service}"]`
             );
 
+            if (!content) return;
+
             const clone = content.cloneNode(true);
             clone.classList.add("mobile-detail");
 
-            card.after(clone);
+            card.insertAdjacentElement("afterend", clone);
+
+            // animación simple de apertura
+            requestAnimationFrame(() => {
+                clone.style.maxHeight = clone.scrollHeight + "px";
+                clone.style.opacity = "1";
+            });
+
+            setTimeout(() => {
+                clone.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }, 50);
+
+            card.classList.add("active");
+            activeService = service;
 
             return;
         }
 
-        // 🔥 DESKTOP → tu lógica actual
-        // (NO TOCAR)
         
+
+        /* =========================
+           DESKTOP (PANEL LATERAL)
+        ========================= */
+
+        // toggle mismo servicio
+        if (activeService === service) {
+            panel.classList.remove("active");
+            cards.forEach(c => c.classList.remove("active"));
+            contents.forEach(c => c.classList.remove("active"));
+            activeService = null;
+            return;
+        }
+
+        activeService = service;
+
+        cards.forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
+
+        panel.classList.add("active");
+
+        contents.forEach(c => {
+            c.classList.toggle("active", c.dataset.content === service);
+        });
+
+        setTimeout(() => {
+            panel.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }, 100);
+
     });
+
 });
 
+/* =========================
+   RESIZE RESET
+========================= */
+window.addEventListener("resize", () => {
+    if (!isMobile()) {
+        closeMobileDetails();
+    }
+});
 
 
 // auto active mobile
@@ -247,3 +266,28 @@ function setupAutoActive() {
 // 🔥 Ejecutar SIEMPRE (sin if)
 setupAutoActive();
 
+
+
+
+/* =========================
+   HERO SLIDER PREMIUM
+========================= */
+
+const slides = document.querySelectorAll(".slide");
+
+let currentSlide = 0;
+
+function changeSlide() {
+
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    slides[currentSlide].classList.add("active");
+}
+
+setInterval(changeSlide, 4500);

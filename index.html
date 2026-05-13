@@ -29,7 +29,7 @@
         <li><a href="#Inicio">Inicio</a></li>
         <li><a href="#Servicios">Servicios</a></li>
         <li><a href="#Testimonios">Testimonios</a></li>
-        <li><a href="#Nosotros">Nosotros</a></li>
+        <li><a href="#DrFelipe">Dr. Felipe</a></li>
         <li><a href="#Contacto">Contacto</a></li>
     </ul>
 
@@ -39,28 +39,117 @@
 
 <div class="menu-overlay" id="menuOverlay"></div>
 
-    <!-- HERO -->
-     
-    <section class="hero" id="Inicio">
+  <!-- HERO PREMIUM -->
+<section class="hero" id="Inicio">
 
-    <div class="content reveal">
+    <!-- SLIDER -->
+    <div class="hero-visual">
+
+    <svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+
+        <!-- BORDE DORADO -->
+        <path
+            d="M340 0
+                C120 180 0 420 40 760
+                C70 930 180 1000 420 1000"
+
+            fill="none"
+            stroke="#E5D3B3"
+            stroke-width="14"
+            stroke-linecap="round"
+        />
+
+        <path
+            d="M260 0
+                C120 180 0 420 40 760
+                C70 930 180 1000 420 1000"
+
+            fill="none"
+            stroke="rgba(255,255,255,0.18)"
+            stroke-width="3"
+            stroke-linecap="round"
+        />
+
+        <!-- IMAGEN -->
+        <defs>
+
+            <clipPath id="heroClip">
+
+                <path
+                    d="M390 0
+                        C170 180 50 420 90 760
+                        C120 930 230 1000 470 1000
+                        L1000 1000
+                        L1000 0
+                        Z"
+                />
+
+            </clipPath>
+
+        </defs>
+
+        <!-- SLIDES -->
+        <image href="img/hero1.jpg"
+               class="slide active"
+               width="1000"
+               height="1000"
+               preserveAspectRatio="xMidYMid slice"
+               clip-path="url(#heroClip)" />
+
+        <image href="img/hero2.jpg"
+               class="slide"
+               width="1000"
+               height="1000"
+               preserveAspectRatio="xMidYMid slice"
+               clip-path="url(#heroClip)" />
+
+        <image href="img/hero3.jpg"
+               class="slide"
+               width="1000"
+               height="1000"
+               preserveAspectRatio="xMidYMid slice"
+               clip-path="url(#heroClip)" />
+
+        <image href="img/hero4.jpg"
+               class="slide"
+               width="1000"
+               height="1000"
+               preserveAspectRatio="xMidYMid slice"
+               clip-path="url(#heroClip)" />
+
+    </svg>
+
+</div>
+
+    <!-- OVERLAY -->
+    <div class="hero-overlay"></div>
+
+    <!-- CONTENIDO -->
+    <div class="hero-content reveal">
+
+        <span class="hero-tag">
+            ODONTOLOGÍA ESTÉTICA PREMIUM
+        </span>
+
         <h1 class="hero-title">
-    Sonrisas que reflejan tu mejor versión
-</h1>
+            Sonrisas que reflejan tu mejor versión
+        </h1>
 
-<p class="hero-subtitle">
-    Odontología estética y funcional con estándares de excelencia, precisión y detalle en cada tratamiento.
-</p>
+        <p class="hero-subtitle">
+            Exclusividad, estética y precisión dental con estándares de alto nivel.
+        </p>
 
-<p class="hero-support">
-    Más de <strong>10 años</strong> devolviendo sonrisas con resultados naturales y duraderos.
-</p>
-        <a href="#Contacto" class="btn">Agendar cita</a>
+        <a href="#Contacto" class="btn-premium">
+            Agendar cita
+        </a>
+
     </div>
 
-    <img src="img/imagen1.jpg" class="hero-img" alt="sonrisa">
-
 </section>
+
+
+
+
 
   <!-- SERVICIOS -->
 
@@ -98,27 +187,194 @@
 
     </div>
 
-    <!-- PANEL DINÁMICO -->
-    <div class="service-panel" id="servicePanel">
+<!-- PANEL DINÁMICO PREMIUM -->
+<div class="service-panel" id="servicePanel">
 
-        <div class="panel-content" data-content="sonrisa">
-            <img src="img/sonrisa.jpg">
-            <p>Texto completo del servicio diseño de sonrisa...</p>
+    <!-- DISEÑO DE SONRISA -->
+    <div class="panel-content" data-content="sonrisa">
+
+        <!-- TEXTO -->
+        <div class="panel-text">
+
+            <span class="panel-tag">
+                Estética Dental Premium
+            </span>
+
+            <h3>
+                Diseño de Sonrisa
+            </h3>
+
+            <p>
+                Transformamos tu sonrisa con un enfoque totalmente personalizado,
+                logrando resultados armónicos, naturales y elegantes que resaltan
+                tu rostro y tu seguridad.
+            </p>
+
+            <p>
+                Utilizamos materiales de alta estética y tecnología digital para
+                planificar cada detalle con precisión, buscando una sonrisa que
+                se vea sofisticada y completamente natural.
+            </p>
+
+            <ul>
+                <li>✔ Resultados naturales y elegantes</li>
+                <li>✔ Planeación digital personalizada</li>
+                <li>✔ Carillas y resinas premium</li>
+                <li>✔ Sonrisa armónica y facialmente equilibrada</li>
+            </ul>
+
         </div>
 
-        <div class="panel-content" data-content="implantes">
-            <img src="img/implantes.jpg">
-            <p>Texto completo de implantes...</p>
+        <!-- IMÁGENES -->
+        <div class="panel-gallery">
+
+            <div class="gallery-item">
+                <img src="img/sonrisa1.jpg" alt="">
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/sonrisa2.jpg" alt="">
+            </div>
+
         </div>
 
-        <div class="panel-content" data-content="blanqueamiento">
-            <img src="img/blanqueamiento.jpg">
-            <p>Texto completo blanqueamiento...</p>
+    </div>
+
+    <!-- IMPLANTES -->
+    <div class="panel-content" data-content="implantes">
+
+        <div class="panel-text">
+
+            <span class="panel-tag">
+                Rehabilitación Oral
+            </span>
+
+            <h3>
+                Implantes Dentales
+            </h3>
+
+            <p>
+                Recupera la funcionalidad y estética de tu sonrisa mediante
+                implantes dentales diseñados para verse y sentirse como dientes naturales.
+            </p>
+
+            <p>
+                Trabajamos con procedimientos seguros, tecnología avanzada y materiales
+                de alta calidad para ofrecer resultados duraderos, cómodos y estéticos.
+            </p>
+
+            <ul>
+                <li>✔ Recuperación de función y estética</li>
+                <li>✔ Implantes de alta calidad</li>
+                <li>✔ Resultados duraderos</li>
+                <li>✔ Procedimientos mínimamente invasivos</li>
+            </ul>
+
         </div>
 
-        <div class="panel-content" data-content="ortodoncia">
-            <img src="img/ortodoncia.jpg">
-            <p>Texto completo ortodoncia...</p>
+        <div class="panel-gallery">
+
+            <div class="gallery-item">
+                <img src="img/implantes1.jpg" alt="">
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/implantes2.jpg" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BLANQUEAMIENTO -->
+    <div class="panel-content" data-content="blanqueamiento">
+
+        <div class="panel-text">
+
+            <span class="panel-tag">
+                Estética Avanzada
+            </span>
+
+            <h3>
+                Blanqueamiento Dental
+            </h3>
+
+            <p>
+                Ilumina tu sonrisa con tratamientos de blanqueamiento profesional
+                diseñados para obtener un tono más brillante sin comprometer
+                la salud dental.
+            </p>
+
+            <p>
+                Aplicamos técnicas seguras y controladas que permiten resultados
+                visibles, uniformes y elegantes desde las primeras sesiones.
+            </p>
+
+            <ul>
+                <li>✔ Sonrisa más brillante y juvenil</li>
+                <li>✔ Procedimiento seguro y controlado</li>
+                <li>✔ Resultados rápidos y uniformes</li>
+                <li>✔ Tecnología estética profesional</li>
+            </ul>
+
+        </div>
+
+        <div class="panel-gallery">
+
+            <div class="gallery-item">
+                <img src="img/blanqueamiento1.jpg" alt="">
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/blanqueamiento2.jpg" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ORTODONCIA -->
+    <div class="panel-content" data-content="ortodoncia">
+
+        <div class="panel-text">
+
+            <span class="panel-tag">
+                Corrección y Armonía
+            </span>
+
+            <h3>
+                Ortodoncia
+            </h3>
+
+            <p>
+                Mejoramos la alineación dental y la armonía facial mediante
+                tratamientos ortodónticos modernos, cómodos y altamente estéticos.
+            </p>
+
+            <p>
+                Cada tratamiento es personalizado para lograr una sonrisa funcional,
+                equilibrada y visualmente atractiva, adaptada a las necesidades de cada paciente.
+            </p>
+
+            <ul>
+                <li>✔ Corrección funcional y estética</li>
+                <li>✔ Tratamientos modernos y discretos</li>
+                <li>✔ Mejor alineación y mordida</li>
+                <li>✔ Sonrisa más armónica y saludable</li>
+            </ul>
+
+        </div>
+
+        <div class="panel-gallery">
+
+            <div class="gallery-item">
+                <img src="img/ortodoncia1.jpg" alt="">
+            </div>
+
+            <div class="gallery-item">
+                <img src="img/ortodoncia2.jpg" alt="">
+            </div>
+
         </div>
 
     </div>
@@ -187,20 +443,27 @@
 
 
   <!-- SOBRE EL DOCTOR -->
-    <section class="about" id="Nosotros">
-    <div class="about-container">
+    <section class="doctor" id="DrFelipe">
+    <div class="doctor-container">
         
-        <div class="about-img reveal reveal-left">
-            <img src="img/doctor.jpeg" alt="Dr Felipe">
+        <div class="doctor-img reveal reveal-left">
+            <img src="img/doctor.jpg" alt="Dr Felipe">
         </div>
 
-        <div class="about-text reveal reveal-right">
-            <h2>Sobre el Dr. Felipe</h2>
+        <div class="doctor-text reveal reveal-right">
+            <h2>Sobre el Dr. Felipe Marín</h2>
             <p>
-                Con años de experiencia en odontología estética, el Dr. Felipe se especializa en transformar sonrisas y devolver la confianza a sus pacientes.
+                El Dr. Felipe Marín es especialista en odontología estética y se ha dedicado a transformar sonrisas a través de un enfoque conservador, ético y altamente personalizado. Su práctica combina los más recientes avances en tecnología y estética dental con años de experiencia clínica, logrando resultados naturales que devuelven seguridad y confianza a cada paciente.
             </p>
             <p>
-                Su enfoque combina tecnología avanzada con un trato humano y cercano, garantizando resultados de alta calidad.
+                Para el Dr. Felipe, cada sonrisa es única. Por eso, cada tratamiento inicia con un análisis detallado de la armonía facial, la expresión y las necesidades individuales de cada persona, permitiendo diseñar resultados exclusivos y completamente personalizados.
+            </p>
+            <p>
+                Más que un tratamiento odontológico, en su clínica se vive una experiencia integral en estética dental, donde la precisión, el confort y la excelencia se reflejan en cada detalle del resultado final.
+            </p>
+            <h4>Dr. Felipe Marín</h4>
+            <p>
+                Odontología estética y diseño de sonrisa premium.
             </p>
         </div>
 
@@ -216,8 +479,8 @@
 
         <div class="contact-card">
             <h3>Líneas de atención</h3>
-            <p>+57 300 000 0000</p>
-            <p>+57 301 000 0000</p>
+            <p>+57 310 894 1600</p>
+            
             <p><strong>WhatsApp disponible</strong></p>
         </div>
 
@@ -229,7 +492,8 @@
         <div class="contact-card">
             <h3>Sede principal</h3>
             <p>Medellín, Colombia</p>
-            <p>Cra 00 #00-00</p>
+            <p>Cra 43a #34-155</p>
+            <p>CC Almacentro consultorio 206</p>
         </div>
 
     </div>
@@ -287,6 +551,15 @@
 </a>
 
 
+    <a href="https://www.instagram.com/drfelipemarin?igsh=cmoycnJwMWlueWc5"
+   class="instagram-float"
+   target="_blank">
+
+    <img src="img/instagram.png" alt="Instagram">
+
+</a>
+
+
 
 <!-- FOOTER -->
 
@@ -309,7 +582,7 @@
                 <li><a href="index.html#Inicio">Inicio</a></li>
                 <li><a href="index.html#Servicios">Servicios</a></li>
                 <li><a href="index.html#Testimonios">Testimonios</a></li>
-                <li><a href="index.html#Nosotros">Nosotros</a></li>
+                <li><a href="index.html#DrFelipe">Dr. Felipe</a></li>
                 <li><a href="index.html#Contacto">Contacto</a></li>
             </ul>
         </div>
@@ -317,19 +590,19 @@
         <!-- CONTACTO -->
         <div class="footer-col">
     <h3>Contacto</h3>
-    <p>📞 +57 300 000 0000</p>
+    <p>📞 +57 310 894 1600</p>
     <p>📱 WhatsApp disponible</p>
     <p>✉️ contacto@clinica.com</p>
 
     <!-- REDES SOCIALES -->
     <div class="footer-social">
-        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+        <a href="https://www.facebook.com/share/1B1ZJyaBY3/" target="_blank" aria-label="Facebook">
             <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.5-3.88 3.8-3.88 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.78-1.64 1.58v1.9h2.8l-.45 2.9h-2.35V22c4.78-.75 8.44-4.91 8.44-9.93z"/>
             </svg>
         </a>
 
-        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/drfelipemarin?igsh=cmoycnJwMWlueWc5" target="_blank" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm5 5a5 5 0 110 10 5 5 0 010-10zm6.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zM12 9a3 3 0 100 6 3 3 0 000-6z"/>
             </svg>
@@ -341,7 +614,7 @@
         <div class="footer-col">
             <h3>Ubicación</h3>
             <p>Medellín, Colombia</p>
-            <p>Cra 00 #00-00</p>
+            <p>Cra 43a #34-155</p>
             <p>Lun - Vie: 8am - 6pm</p>
         </div>
 
