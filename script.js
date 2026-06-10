@@ -291,3 +291,133 @@ function changeSlide() {
 }
 
 setInterval(changeSlide, 4500);
+
+
+
+
+
+
+/* ==================================
+   SLIDER NUESTRA CLÍNICA
+================================== */
+
+const clinicSlides =
+document.querySelectorAll(".clinic-slide");
+
+const clinicDots =
+document.querySelectorAll(".clinic-dots .dot");
+
+let clinicIndex = 0;
+
+/* MOSTRAR IMAGEN */
+
+function showClinicSlide(index){
+
+    clinicSlides.forEach(slide =>
+        slide.classList.remove("active")
+    );
+
+    clinicDots.forEach(dot =>
+        dot.classList.remove("active")
+    );
+
+    clinicSlides[index].classList.add("active");
+    clinicDots[index].classList.add("active");
+
+    clinicIndex = index;
+}
+
+/* AUTO PLAY */
+
+function nextClinicSlide(){
+
+    clinicIndex++;
+
+    if(clinicIndex >= clinicSlides.length){
+        clinicIndex = 0;
+    }
+
+    showClinicSlide(clinicIndex);
+}
+
+/* CAMBIO AUTOMÁTICO */
+
+let clinicInterval =
+setInterval(nextClinicSlide, 5000);
+
+/* CLICK EN LOS DOTS */
+
+clinicDots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+        showClinicSlide(index);
+
+        /* reinicia el temporizador */
+
+        clearInterval(clinicInterval);
+
+        clinicInterval =
+        setInterval(nextClinicSlide, 5000);
+
+    });
+
+});
+
+
+
+/* ==================================
+   SWIPE MOBILE
+================================== */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const clinicSlider =
+document.querySelector(".clinic-slider");
+
+clinicSlider.addEventListener("touchstart", (e) => {
+
+    touchStartX = e.changedTouches[0].screenX;
+
+});
+
+clinicSlider.addEventListener("touchend", (e) => {
+
+    touchEndX = e.changedTouches[0].screenX;
+
+    handleSwipe();
+
+});
+
+function handleSwipe() {
+
+    const distance = touchStartX - touchEndX;
+
+    /* SWIPE IZQUIERDA */
+
+    if(distance > 50){
+
+        clinicIndex++;
+
+        if(clinicIndex >= clinicSlides.length){
+            clinicIndex = 0;
+        }
+
+        showClinicSlide(clinicIndex);
+    }
+
+    /* SWIPE DERECHA */
+
+    if(distance < -50){
+
+        clinicIndex--;
+
+        if(clinicIndex < 0){
+            clinicIndex = clinicSlides.length - 1;
+        }
+
+        showClinicSlide(clinicIndex);
+    }
+
+}
