@@ -2706,7 +2706,274 @@ body {
 
 
 
+/* ================================================= */
+/* ========== PANTALLAS GRANDES (2K) ============== */
+/* ================================================= */
 
+@media (min-width: 1920px) {
+
+    /* CONTENEDOR GENERAL */
+    .container {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero-content {
+        max-width: 900px;
+    }
+
+    .hero-title {
+        font-size: 6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.35rem;
+        max-width: 700px;
+    }
+
+    .hero-tag {
+        font-size: 1rem;
+    }
+
+    .btn-premium {
+        padding: 20px 42px;
+        font-size: 1.1rem;
+    }
+
+    /* TITULOS GENERALES */
+    .services-header h2,
+    .clinic-content h2,
+    .doctor-text h2,
+    .testimonials-header h2,
+    .hero-testimonials-content h1 {
+        font-size: 5rem;
+    }
+
+    /* TEXTOS GENERALES */
+    .services-header p,
+    .clinic-content p,
+    .doctor-text p,
+    .testimonials-header p,
+    .hero-testimonials-content p {
+        font-size: 1.2rem;
+    }
+
+    /* SERVICIOS */
+    .service-card {
+        padding: 45px 35px;
+    }
+
+    .service-card h3 {
+        font-size: 1.7rem;
+    }
+
+    .service-card p {
+        font-size: 1.1rem;
+    }
+
+    .panel-text h3 {
+        font-size: 3.5rem;
+    }
+
+    .panel-text p,
+    .panel-text ul li {
+        font-size: 1.1rem;
+    }
+
+    .panel-gallery img {
+        height: 400px;
+    }
+
+    /* CLÍNICA */
+    .clinic-slider {
+        height: 700px;
+    }
+
+    /* DOCTOR */
+    .doctor-img img {
+        max-width: 520px;
+        height: 720px;
+    }
+
+    .doctor-text h4 {
+        font-size: 1.8rem;
+    }
+
+    /* TESTIMONIOS */
+    .video-card {
+        padding: 30px;
+    }
+
+    .video-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .video-card p {
+        font-size: 1.1rem;
+    }
+
+    /* CONTACTO */
+    .contact h3 {
+        font-size: 2.2rem;
+    }
+
+    .contact-info h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.1rem;
+        padding: 18px 20px;
+    }
+
+    .contact-card {
+        width: 320px;
+        padding: 35px;
+    }
+
+    /* FOOTER */
+    .footer {
+        font-size: 1.05rem;
+    }
+}
+
+
+/* ================================================= */
+/* =========== PANTALLAS 4K / ULTRAWIDE ============ */
+/* ================================================= */
+
+@media (min-width: 2560px) {
+
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 2200px;
+    }
+
+    /* HERO */
+    .hero-content {
+        max-width: 1050px;
+    }
+
+    .hero-title {
+        font-size: 7rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+        max-width: 850px;
+    }
+
+    .hero-tag {
+        font-size: 1.1rem;
+    }
+
+    .btn-premium {
+        padding: 24px 48px;
+        font-size: 1.2rem;
+    }
+
+    /* TITULOS */
+    .services-header h2,
+    .clinic-content h2,
+    .doctor-text h2,
+    .testimonials-header h2,
+    .hero-testimonials-content h1 {
+        font-size: 6rem;
+    }
+
+    /* PÁRRAFOS */
+    .services-header p,
+    .clinic-content p,
+    .doctor-text p,
+    .testimonials-header p,
+    .hero-testimonials-content p {
+        font-size: 1.3rem;
+    }
+
+    /* SERVICIOS */
+    .service-card {
+        padding: 55px 40px;
+    }
+
+    .service-card h3 {
+        font-size: 1.9rem;
+    }
+
+    .service-card p {
+        font-size: 1.2rem;
+    }
+
+    .panel-text h3 {
+        font-size: 4rem;
+    }
+
+    .panel-text p,
+    .panel-text ul li {
+        font-size: 1.2rem;
+    }
+
+    .panel-gallery img {
+        height: 480px;
+    }
+
+    /* CLÍNICA */
+    .clinic-slider {
+        height: 850px;
+    }
+
+    /* DOCTOR */
+    .doctor-img img {
+        max-width: 620px;
+        height: 850px;
+    }
+
+    .doctor-text h4 {
+        font-size: 2rem;
+    }
+
+    /* TESTIMONIOS */
+    .video-card {
+        padding: 35px;
+    }
+
+    .video-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .video-card p {
+        font-size: 1.2rem;
+    }
+
+    /* CONTACTO */
+    .contact h3 {
+        font-size: 2.5rem;
+    }
+
+    .contact-info h2 {
+        font-size: 3rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.2rem;
+        padding: 20px 22px;
+    }
+
+    .contact-card {
+        width: 360px;
+        padding: 40px;
+    }
+
+    /* FOOTER */
+    .footer {
+        font-size: 1.1rem;
+    }
+}
 
 
 
