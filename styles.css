@@ -583,58 +583,84 @@ body {
 
 /* CARDS */
 .service-card {
-
     position: relative;
+    overflow: hidden;
 
-    padding: 38px 30px;
+    /* DORADO MATE */
+    background: rgba(168, 130, 67, 0.38);
 
-    border-radius: 32px;
+    /* EFECTO CRISTAL */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 
-    text-align: left;
+    /* BORDE DORADO SUTIL */
+    border: 1px solid rgba(218, 186, 125, 0.55);
+
+    border-radius: 20px;
+
+    /* SOMBRA Y PROFUNDIDAD */
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.12);
 
     cursor: pointer;
 
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,0.03),
-            rgba(255,255,255,0.015)
-        );
-
-    border: 1px solid rgba(229,211,179,0.10);
-
-    backdrop-filter: blur(10px);
-
     transition:
-        transform 0.45s ease,
-        border-color 0.45s ease,
-        box-shadow 0.45s ease;
-
-    box-shadow:
-        0 10px 40px rgba(0,0,0,0.35);
+        transform 0.4s ease,
+        background 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
 }
 
 .service-card::before {
+    content: "";
+    position: absolute;
 
+    top: -60%;
+    left: -50%;
+
+    width: 180%;
+    height: 120%;
+
+    background: linear-gradient(
+        115deg,
+        transparent 35%,
+        rgba(255, 255, 255, 0.12) 48%,
+        transparent 60%
+    );
+
+    transform: rotate(8deg);
+
+    pointer-events: none;
+
+    opacity: 0.55;
+
+    transition:
+        transform 0.7s ease,
+        opacity 0.5s ease;
+}
+
+.service-card::after {
     content: "";
 
     position: absolute;
 
-    inset: 0;
+    width: 180px;
+    height: 180px;
 
-    background:
-        radial-gradient(
-            circle at top left,
-            rgba(229,211,179,0.08),
-            transparent 45%
-        );
+    top: -90px;
+    right: -90px;
 
-    opacity: 0;
+    border-radius: 50%;
 
-    transition: opacity 0.5s ease;
+    background: rgba(226, 190, 119, 0.18);
+
+    filter: blur(35px);
+
+    pointer-events: none;
 }
+
 
 .service-card h3 {
 
@@ -658,19 +684,21 @@ body {
 
 /* HOVER PRO */
 .service-card:hover {
+    transform: translateY(-7px);
 
-    transform: translateY(-10px);
+    background: rgba(185, 145, 76, 0.48);
 
-    border-color: rgba(229,211,179,0.35);
+    border-color: rgba(231, 203, 153, 0.75);
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,0.45),
-        0 0 30px rgba(198,161,91,0.08);
+        0 22px 45px rgba(0, 0, 0, 0.38),
+        0 0 25px rgba(193, 151, 78, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 
 .service-card:hover::before {
-
-    opacity: 1;
+    transform: translateX(25%) rotate(8deg);
+    opacity: 0.75;
 }
 .auto-active {
     transform: translateY(-10px) scale(1.02);
@@ -1879,44 +1907,35 @@ body {
 
 /* TARJETAS */
 .contact-card {
-
-    width: 280px;
-
-    padding: 28px;
-
-    border-radius: 22px;
-
-    color: #1a1a1a;
-
     position: relative;
     overflow: hidden;
+    padding: 28px 30px;
+    box-sizing: border-box;
+    width: 300px;
 
-    backdrop-filter: blur(10px);
+    /* DORADO MATE */
+    background: rgba(168, 130, 67, 0.38);
 
-    border: 1px solid rgba(255,255,255,0.08);
+    /* EFECTO CRISTAL */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 
-    /* 🔥 EFECTO DORADO PREMIUM */
-    background:
-    linear-gradient(
-        135deg,
-        #f5d27a,
-        #d4a84f,
-        #b88a2a,
-        #f5d27a
-    );
+    /* BORDE DORADO */
+    border: 1px solid rgba(218, 186, 125, 0.55);
 
-    background-size: 220% 220%;
+    border-radius: 20px;
 
+    /* PROFUNDIDAD */
     box-shadow:
-        0 12px 30px rgba(0,0,0,0.35),
-        inset 0 2px 6px rgba(255,255,255,0.28),
-        inset 0 -2px 6px rgba(0,0,0,0.18);
+        0 15px 35px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.12);
 
     transition:
-        transform 0.45s ease,
-        box-shadow 0.45s ease,
-        border-color 0.45s ease,
-        background 0.45s ease;
+        transform 0.4s ease,
+        background 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
 }
 
 
@@ -1925,22 +1944,48 @@ body {
 
     position: absolute;
 
-    top: -100%;
-    left: -40%;
+    top: -60%;
+    left: -50%;
 
-    width: 80%;
-    height: 300%;
+    width: 180%;
+    height: 120%;
 
-    background:
-    linear-gradient(
-        rgba(255,255,255,0),
-        rgba(255,255,255,0.18),
-        rgba(255,255,255,0)
+    background: linear-gradient(
+        115deg,
+        transparent 35%,
+        rgba(255, 255, 255, 0.12) 48%,
+        transparent 60%
     );
 
-    transform: rotate(25deg);
+    transform: rotate(8deg);
 
-    transition: 0.8s;
+    pointer-events: none;
+
+    opacity: 0.55;
+
+    transition:
+        transform 0.7s ease,
+        opacity 0.5s ease;
+}
+
+.contact-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -90px;
+    right: -90px;
+
+    border-radius: 50%;
+
+    background: rgba(226, 190, 119, 0.18);
+
+    filter: blur(35px);
+
+    pointer-events: none;
 }
 
 .contact-card:hover::before,
@@ -1952,10 +1997,12 @@ body {
 /* TEXTO */
 .contact-card h3 {
     margin-bottom: 10px;
+    line-height: 1.2;
 }
 
 .contact-card p {
     margin-bottom: 5px;
+    line-height: 1.5;
 }
 
 /* EFECTO HOVER PREMIUM */
